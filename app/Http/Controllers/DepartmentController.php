@@ -21,11 +21,11 @@ class DepartmentController extends Controller
         //
         $data = DB::table('company_department')
             ->select('company_department.id as department_id', 'company_department.branch_id', 'company_department.department_name',
-                'company_department.department_head', 'company_branch.id as branch_id', 'company_branch.location_name', 'company_department.deleted_at',
+                'company_department.department_head', 'company_branch.id as branch_id', 'company_branch.location_name',
                 'employee.id', 'employee.firstname', 'employee.lastname')
             ->join('employee', 'employee.id', '=', 'company_department.department_head')
             ->join('company_branch', 'company_branch.id', '=', 'company_department.branch_id')
-            ->whereNull('company_department.deleted_at')
+//            ->whereNull('company_department.deleted_at')
             ->get();
 
         $company = Company::all();
@@ -55,7 +55,7 @@ class DepartmentController extends Controller
     {
         //
         $request->validate([
-            'department_name'=>'unique:company_department,deleted_at,NULL'
+            'department_name'=>'unique:company_department'
         ]);
 
         Department::create($request->all());

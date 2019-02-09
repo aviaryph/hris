@@ -22,10 +22,9 @@ class BranchController extends Controller
         $branch = DB::table('company_branch')
             ->select('company_branch.id as branchid', 'company_branch.location_name', 'company_branch.email', 'company_branch.phone',
                 'company_branch.address_1', 'company_branch.location_head', 'company_branch.address_2', 'company_branch.state', 'company_branch.zipcode',
-                'company_branch.company_id', 'company_branch.city', 'company.id as company_id', 'company.name', 'employee.id as employee_id', 'employee.firstname', 'employee.lastname', 'company_branch.deleted_at')
+                'company_branch.company_id', 'company_branch.city', 'company.id as company_id', 'company.name', 'employee.id as employee_id', 'employee.firstname', 'employee.lastname')
             ->join('company', 'company_branch.company_id', '=', 'company.id')
             ->join('employee', 'company_branch.location_head', '=', 'employee.id')
-            ->whereNull('company_branch.deleted_at')
             ->get();
 
         $company = Company::all();

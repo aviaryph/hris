@@ -9,7 +9,7 @@ class department extends Model
 {
     //
 
-    use SoftDeletes;
+//    use SoftDeletes;
     protected $table = "company_department";
 
     protected $guarded = [];

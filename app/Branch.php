@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Branch extends Model
 {
     //
-    use SoftDeletes;
 
     protected $table = "company_branch";
     protected $guarded = [];

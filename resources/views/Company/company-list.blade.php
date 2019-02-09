@@ -46,7 +46,7 @@
                                                 <td>{{ $row->name }}</td>
                                                 <td>{{ $row->email }}</td>
                                                 <td>{{ $row->website_url }}</td>
-                                                <td>{{ $row->company_type }}</td>
+                                                <td>{{ $row->company_type_id }}</td>
                                                 <td>{!! $row->address_1 !!}</td>
                                                 <td>{{ $row->city }}</td>
                                                 <td>
@@ -108,8 +108,8 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label>Company Type</label>
-                                    <select name="company_type" class="form-control">
-                                        <option value="Corporate">Corporate</option>
+                                    <select name="company_type_id" class="form-control">
+                                        <option value="1">Corporate</option>
                                     </select>
                                 </div>
                                 <div class="col-md-4">
@@ -184,8 +184,8 @@
                             </div>
                             <div class="col-md-4">
                                 <label>Company Type</label>
-                                <select name="company_type" class="form-control">
-                                    <option value="Corporate">Corporate</option>
+                                <select name="company_type_id" class="form-control">
+                                    <option value="1">Corporate</option>
                                 </select>
                             </div>
                             <div class="col-md-4">

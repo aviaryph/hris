@@ -31,24 +31,16 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>Company</th>
-                                                <th>Email</th>
-                                                <th>Website</th>
-                                                <th>Company Type</th>
-                                                <th>Address</th>
-                                                <th>City</th>
+                                                <th>Department</th>
+                                                <th>Designation</th>
                                                 <th width="13%">Actions</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($company as $row):
+                                            @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->name }}</td>
-                                                <td>{{ $row->email }}</td>
-                                                <td>{{ $row->website }}</td>
-                                                <td>{{ $row->company_type }}</td>
-                                                <td>{!! $row->address_1 !!}</td>
-                                                <td>{{ $row->city }}</td>
+                                                <td>{{ $row->department_name }}</td>
+                                                <td>{{ $row->designation_name }}</td>
                                                 <td>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>
@@ -79,66 +71,30 @@
     </div>
 
 
-    <div class="modal fade" id="create" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" id="create" role="dialog">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="company" method="POST" enctype="multipart/form-data">
+                <form action="designation" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Company Record</h4>
+                        <h4 class="title" id="defaultModalLabel">New Designation Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Company Code</label>
-                                    <input type="text" class="form-control" id="company_code" name="company_code" required readonly>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Company Name</label>
-                                    <input type="text" class="form-control" id="company_name" onchange="getIntials()" name="name" required >
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Business Email</label>
-                                    <input type="email" class="form-control" name="email" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Company Type</label>
-                                    <select name="company_type" class="form-control">
-                                        <option value="Corporate">Corporate</option>
+                                    <label>Department</label>
+                                    <select name="department_id" class="form-control department_id">
+                                        @foreach($department as $row):
+                                            <option value="{{ $row->id }}">{{ $row->department_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Website URL</label>
-                                    <input type="text" class="form-control" name="website_url" />
-                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Address Line 1</label>
-                                    <textarea name="address_1" class="form-control" rows="4"></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <label>Address Line 2</label>
-                                    <textarea name="address_2" class="form-control" rows="4"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>City</label>
-                                    <input class="form-control" type="text" name="city" required />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>State</label>
-                                    <input class="form-control" type="text" name="state" required />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Zip Code</label>
-                                    <input class="form-control" type="text" name="zipcode" required />
+                                    <label>Designation</label>
+                                    <input type="text" class="form-control" name="designation_name" />
                                 </div>
                             </div>
                         </div>
@@ -153,13 +109,13 @@
         </div>
     </div>
 
-    @foreach($company as $row):
-    <div class="modal fade" id="edit{{ $row->id }}" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+    @foreach($data as $row):
+    <div class="modal fade" id="edit{{ $row->id }}" role="dialog">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="company/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="designation/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Company Record</h4>
+                        <h4 class="title" id="defaultModalLabel">Edit Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
@@ -167,58 +123,21 @@
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Company Code</label>
-                                    <input type="text" class="form-control" id="company_code" name="company_code" value="{{ $row->company_code }}" required readonly>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Company Name</label>
-                                    <input type="text" class="form-control" id="company_name" value="{{ $row->name }}" name="name" required >
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Business Email</label>
-                                    <input type="email" class="form-control" value="{{ $row->email }}" name="email" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Company Type</label>
-                                    <select name="company_type" class="form-control">
-                                        <option value="Corporate">Corporate</option>
+                                    <label>Department</label>
+                                    <select name="department_id" class="form-control department_id" id="department">
+                                        @foreach($department as $departments):
+                                        <option value="{{ $departments->id }}" {{ $departments->id == $row->department_id? "Selected": "" }}>{{ $row->department_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Website URL</label>
-                                    <input type="text" class="form-control" value="{{ $row->website_url }}" name="website_url" />
-                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Address Line 1</label>
-                                    <textarea name="address_1" class="form-control" rows="4">{{ $row->address_1 }}</textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <label>Address Line 2</label>
-                                    <textarea name="address_2" class="form-control" rows="4">{{ $row->address_2 }}</textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>City</label>
-                                    <input class="form-control" type="text" name="city" value="{{ $row->city }}" required />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>State</label>
-                                    <input class="form-control" type="text" name="state" value="{{ $row->state }}" required />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Zip Code</label>
-                                    <input class="form-control" type="text" name="zipcode" value="{{ $row->zipcode }}" required />
+                                    <label>Designation</label>
+                                    <input type="text" class="form-control" name="designation_name" value="{{ $row->designation_name }}" />
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
@@ -230,13 +149,13 @@
     </div>
     @endforeach
 
-    @foreach($company as $row):
+    @foreach($data as $row):
     <div class="modal fade" id="delete{{ $row->id }}" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <form action="company/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="designation/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Company Record</h4>
+                        <h4 class="title" id="defaultModalLabel">Delete Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
@@ -259,6 +178,9 @@
 
 @section('script')
     <script src="{{ asset('app-assets') }}/js/scripts/tables/datatables-extensions/datatable-responsive.min.js"></script>
+    <script>
+        $('.department_id').select2();
+    </script>
     <script>
 
         function getIntials() {
