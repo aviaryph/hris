@@ -5,9 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Employee extends Model
+class EmployeeAward extends Model
 {
-    use SoftDeletes;
-    protected $table = "employee";
+   // use SoftDeletes;
+    protected $table = "employee_awards";
     protected $guarded = [];
+
 }

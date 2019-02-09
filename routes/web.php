@@ -20,3 +20,16 @@ Route::resource('company', 'CompanyController');
 Route::resource('branch', 'BranchController');
 Route::resource('department', 'DepartmentController');
 Route::resource('designation', 'DesignationController');
+
+
+Route::resource('employee-award', 'EmployeeAwardController');
+Route::resource('employee-setrole', 'EmployeeSetRoleController');
+Route::resource('employee-transfer', 'EmployeeTransferController');
+Route::resource('employee-resignation', 'EmployeeResignationController');
+Route::resource('employee-travel', 'EmployeeTravelController');
+Route::resource('employee-promotion', 'EmployeePromotionController');
+Route::resource('employee-complain', 'EmployeeComplainController');
+Route::resource('employee-warning', 'EmployeeWarningController');
+Route::resource('employee-terminations', 'EmployeeTerminationController');
+Route::resource('employee-lastlogin', 'EmployeeLastLoginController');
+Route::resource('employee-exit', 'EmployeeExitController');
