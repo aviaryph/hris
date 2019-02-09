@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class designation extends Model
 {
 
-//    protected $table = "designation";
+    protected $table = "company_designation";
 
     protected $guarded = [];
 }

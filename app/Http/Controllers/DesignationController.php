@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\department;
 use App\designation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DesignationController extends Controller
 {
@@ -16,6 +18,13 @@ class DesignationController extends Controller
     {
         //
 
+        $data = DB::table('company_department')
+            ->join('company_designation', 'company_designation.department_id', '=', 'company_department.id')
+            ->get();
+
+        $department = department::all()->sortByDesc('id');
+
+        return view('Designation.designation-list', compact('department', 'data'));
 
     }
 
@@ -38,6 +47,16 @@ class DesignationController extends Controller
     public function store(Request $request)
     {
         //
+        designation::create($request->all());
+        $notification = array(
+            'message' => 'Designation Created Successfully',
+            'alert-type' => 'success'
+        );
+
+
+        return redirect()->back()->with($notification);
+
+
     }
 
     /**
@@ -72,6 +91,15 @@ class DesignationController extends Controller
     public function update(Request $request, designation $designation)
     {
         //
+
+        designation::find($designation->id)->update($request->all());
+        $notification = array(
+            'message' => 'Designation Updated Successfully',
+            'alert-type' => 'info'
+        );
+
+        return redirect()->back()->with($notification);
+
     }
 
     /**
@@ -83,5 +111,14 @@ class DesignationController extends Controller
     public function destroy(designation $designation)
     {
         //
+
+
+        designation::find($designation->id)->delete();
+        $notification = array(
+            'message' => 'Designation Deleted Successfully',
+            'alert-type' => 'error'
+        );
+
+        return redirect()->back()->with($notification);
     }
 }
