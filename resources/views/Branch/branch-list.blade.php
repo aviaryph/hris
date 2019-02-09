@@ -102,7 +102,7 @@
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     <label>Location Name</label>
-                                    <input type="text" class="form-control" id="company_name" name="location_name" required >
+                                    <input type="text" class="form-control" name="location_name" required >
                                 </div>
                             </div>
                             <div class="form-group row">
