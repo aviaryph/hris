@@ -5,7 +5,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Department List</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Award List</h3>
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="btn-group float-md-right">
@@ -45,10 +45,10 @@
                                             <tr>
                                                 <td>{{ $row->employee_id }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
-                                                <td>{{ $row->website }}</td>
-                                                <td>{{ $row->company_type }}</td>
-                                                <td>{!! $row->address_1 !!}</td>
-                                                <td>{{ $row->city }}</td>
+                                                <td>{{ $row->award_information }}</td>
+                                                <td>{{ $row->gift_item }}</td>
+                                                <td>{!! $row->cash_price !!}</td>
+                                                <td>{{ $row->award_month_year }}</td>
                                                 <td>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->department_id }}"><i class="la la-edit"></i> </button>
@@ -82,121 +82,75 @@
     <div class="modal fade" id="create" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <form action="department" method="POST" enctype="multipart/form-data">
+                <form action="employee-award" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Department Record</h4>
+                        <h4 class="title" id="defaultModalLabel">New Award Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Department Name</label>
-                                    <input type="text" class="form-control" name="department_name" required>
+                                    <label>Employee</label>
+                                    <input type="text" class="form-control" name="employee_id" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label>Branch Name</label>
-                                    <select name="branch_id" class="form-control" id="branch">
-                                        @foreach($branch as $branchs):
-                                            <option value="{{ $branchs->id }}">{{ $branchs->location_name }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label>Award Type</label>
+                                    <input type="text" class="form-control" name="award_type_id" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label>Department Head</label>
-                                    <select name="department_head" class="form-control" id="department">
-                                        @foreach($employee as $employees):
-                                            <option value="{{ $employees->id }}">{{ $employees->firstname . " " . $employees->lastname }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label>Date</label>
+                                    <input type="date" class="form-control" name="created_at" required>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Month & Year</label>
+                                    <input type="text" class="form-control" name="award_month_year" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label>Gift</label>
+                                    <input type="text" class="form-control" name="gift_item" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Cash</label>
+                                    <input type="text" class="form-control" name="cash_price" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Award Information</label>
+                                    <input type="text" class="form-control" name="award_information" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Description</label>
+                                    <input type="text" class="form-control" name="description" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Photo</label>
+                                    <input type="text" class="form-control" name="award_photo" required>
+                                </div>
+                            </div>
+
                         </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-                        <button type="submit" class="btn btn-info">Save Record</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    @foreach($data as $row):
-    <div class="modal fade" id="edit{{ $row->department_id }}" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <form action="department/{{ $row->department_id }}" method="POST" enctype="multipart/form-data">
-                    <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">Edit Record</h4>
-                    </div>
-                    <div class="modal-body">
-                        @csrf
-                        @method('PATCH')
-                        <div class="col-md-12">
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Department Name</label>
-                                    <input type="text" class="form-control" name="department_name" required value="{{ $row->department_name }}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Branch Name</label>
-                                    <select name="branch_id" class="form-control" id="branch">
-                                        @foreach($branch as $branchs):
-                                        <option value="{{ $branchs->id }}" {{ $branchs-> }}>{{ $branchs->location_name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Department Head</label>
-                                    <select name="department_head" class="form-control" id="department">
-                                        @foreach($employee as $employees):
-                                        <option value="{{ $employees->id }}">{{ $employees->firstname . " " . $employees->lastname }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                            <button type="submit" class="btn btn-info">Save Record</button>
                         </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-                        <button type="submit" class="btn btn-info">Update Record</button>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
-    @endforeach
 
-    @foreach($data as $row):
-    <div class="modal fade" id="delete{{ $row->department_id }}" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <form action="department/{{ $row->department_id }}" method="POST" enctype="multipart/form-data">
-                    <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">Delete Record</h4>
-                    </div>
-                    <div class="modal-body">
-                        @csrf
-                        @method('DELETE')
-                        <p>Are you sure you want to delete this record?</p>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-                        <button type="submit" class="btn btn-warning">Delete Record</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    @endforeach
 
 
 @endsection
@@ -228,17 +182,7 @@
             var acronym = matches.join('.');
             $("#middleInitial").val(acronym + '.');
         }
-        function dateToAge(){
-            var dateString = $("#birthday").val();
-            var today = new Date();
-            var birthDate = new Date(dateString);
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            $("#age").val(age+'');
-        }
+
     </script>
 
 @endsection
