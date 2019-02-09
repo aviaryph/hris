@@ -20,8 +20,7 @@ Route::resource('company', 'CompanyController');
 Route::resource('branch', 'BranchController');
 Route::resource('department', 'DepartmentController');
 Route::resource('designation', 'DesignationController');
-
-
+Route::resource('employee', 'EmployeeController');
 Route::resource('employee-award', 'EmployeeAwardController');
 Route::resource('employee-setrole', 'EmployeeSetRoleController');
 Route::resource('employee-transfer', 'EmployeeTransferController');
