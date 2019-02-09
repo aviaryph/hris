@@ -31,18 +31,24 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>Department Name</th>
-                                                <th>Department Head</th>
-                                                <th>Branch</th>
+                                                <th>Employee ID</th>
+                                                <th>Employee Name</th>
+                                                <th>Award Name</th>
+                                                <th>Gift</th>
+                                                <th>Cash Price</th>
+                                                <th>Month & Year</th>
                                                 <th width="13%">Actions</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->department_name }}</td>
+                                                <td>{{ $row->employee_id }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
-                                                <td>{{ $row->location_name }}</td>
+                                                <td>{{ $row->website }}</td>
+                                                <td>{{ $row->company_type }}</td>
+                                                <td>{!! $row->address_1 !!}</td>
+                                                <td>{{ $row->city }}</td>
                                                 <td>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->department_id }}"><i class="la la-edit"></i> </button>
