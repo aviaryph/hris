@@ -16,6 +16,7 @@ class CompanyController extends Controller
     {
         //
         $company = Company::all();
+
         return view('Company.company-list', compact('company'));
     }
 
@@ -42,7 +43,7 @@ class CompanyController extends Controller
 //        dd($request->all());
 
         $request->validate([
-            'name'=>'unique:companies'
+            'name'=>'unique:company,deleted_at,null'
         ]);
 
         Company::create($request->all());
