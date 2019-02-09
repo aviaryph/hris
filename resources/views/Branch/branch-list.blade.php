@@ -41,23 +41,23 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            {{--@foreach($data as $row):--}}
-                                            {{--<tr>--}}
-                                                {{--<td>{{ $row->name }}</td>--}}
-                                                {{--<td>{{ $row->email }}</td>--}}
-                                                {{--<td>{{ $row->website }}</td>--}}
-                                                {{--<td>{{ $row->company_type }}</td>--}}
-                                                {{--<td>{!! $row->address_1 !!}</td>--}}
-                                                {{--<td>{{ $row->city }}</td>--}}
-                                                {{--<td>--}}
-                                                    {{--<div class="buttons-group">--}}
-                                                        {{--<button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>--}}
-                                                        {{--<button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->id }}"><i class="la la-trash"></i> </button>--}}
-                                                    {{--</div>--}}
+                                            @foreach($branch as $row):
+                                            <tr>
+                                                <td>{{ $row->location_name }}</td>
+                                                <td>{{ $row->firstname . " " . $row->lastname  }}</td>
+                                                <td>{{ $row->name }}</td>
+                                                <td>{{ $row->phone }}</td>
+                                                <td>{!! $row->address_1 !!}</td>
+                                                <td>{{ $row->city }}</td>
+                                                <td>
+                                                    <div class="buttons-group">
+                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->branchid }}"><i class="la la-edit"></i> </button>
+                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->branchid }}"><i class="la la-trash"></i> </button>
+                                                    </div>
 
-                                                {{--</td>--}}
-                                            {{--</tr>--}}
-                                            {{--@endforeach--}}
+                                                </td>
+                                            </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -82,7 +82,7 @@
     <div class="modal fade" id="create" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <form action="department" method="POST" enctype="multipart/form-data">
+                <form action="branch" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">New Branch Record</h4>
                     </div>
@@ -100,23 +100,27 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Location Name</label>
+                                <div class="col-md-6">
+                                    <label>Branch Name</label>
                                     <input type="text" class="form-control" name="location_name" required >
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Branch Head</label>
+                                    <select name="location_head" class="form-control" id="location_head">
+                                        @foreach($employee as $row):
+                                            <option value="{{ $row->id }}">{{ $row->firstname . " " .  $row->lastname }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <label>Email</label>
                                     <input type="email" class="form-control" name="email" />
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <label>Telephone Number</label>
                                     <input type="tel" class="form-control" name="phone" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Website URL</label>
-                                    <input type="text" class="form-control" name="website_url" />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -156,12 +160,12 @@
     </div>
 
     @foreach($branch as $row):
-    <div class="modal fade" id="edit{{ $row->id }}" tabindex="-1" role="dialog">
+    <div class="modal fade" id="edit{{ $row->branchid }}" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <form action="department/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="branch/{{ $row->branchid }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Company Record</h4>
+                        <h4 class="title" id="defaultModalLabel">Edit Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
@@ -169,30 +173,36 @@
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Company Code</label>
-                                    <input type="text" class="form-control" id="company_code" name="company_code" value="{{ $row->company_code }}" required readonly>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Company Name</label>
-                                    <input type="text" class="form-control" id="company_name" value="{{ $row->name }}" name="name" required >
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Business Email</label>
-                                    <input type="email" class="form-control" value="{{ $row->email }}" name="email" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Company Type</label>
-                                    <select name="company_type" class="form-control">
-                                        <option value="Corporate">Corporate</option>
+                                    <label>Company</label>
+                                    <select name="company_id" class="form-control" id="company">
+                                        @foreach($company as $companies):
+                                            <option value="{{ $companies->id }}" {{ $companies->id == $row->company_id? "Selected": "" }}>{{ $companies->name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Website URL</label>
-                                    <input type="text" class="form-control" value="{{ $row->website_url }}" name="website_url" />
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label>Branch Name</label>
+                                    <input type="text" class="form-control" name="location_name" value="{{ $row->location_name }}" required >
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Branch Head</label>
+                                    <select name="location_head" class="form-control" id="location_head">
+                                        @foreach($employee as $employees):
+                                        <option value="{{ $employees->id }}" {{ $employees->id == $row->employee_id? "Selected": "" }}>{{ $employees->firstname . " " .  $employees->lastname }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" value="{{ $row->email }}" name="email" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Telephone Number</label>
+                                    <input type="tel" class="form-control" name="phone" value="{{ $row->phone }}" />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -220,7 +230,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
@@ -233,12 +242,12 @@
     @endforeach
 
     @foreach($branch as $row):
-    <div class="modal fade" id="delete{{ $row->id }}" tabindex="-1" role="dialog">
+    <div class="modal fade" id="delete{{ $row->branchid }}" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <form action="department/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="branch/{{ $row->branchid }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Company Record</h4>
+                        <h4 class="title" id="defaultModalLabel">Delete Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
@@ -266,6 +275,7 @@
 
     <script>
         $('#company').select2();
+        $("#location_head").select2();
     </script>
     <script>
 

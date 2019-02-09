@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Branch;
 use App\Company;
 use App\Department;
+use App\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DepartmentController extends Controller
 {
@@ -16,8 +19,20 @@ class DepartmentController extends Controller
     public function index()
     {
         //
-        $data = department::all();
-        return view('Department.department-list', compact('data'));
+        $data = DB::table('company_department')
+            ->select('company_department.id as department_id', 'company_department.branch_id', 'company_department.department_name',
+                'company_department.department_head', 'company_branch.id as branch_id', 'company_branch.location_name', 'company_department.deleted_at',
+                'employee.id', 'employee.firstname', 'employee.lastname')
+            ->join('employee', 'employee.id', '=', 'company_department.department_head')
+            ->join('company_branch', 'company_branch.id', '=', 'company_department.branch_id')
+            ->whereNull('company_department.deleted_at')
+            ->get();
+
+        $company = Company::all();
+        $employee = Employee::all()->sortByDesc('id');
+        $branch = Branch::all()->sortByDesc('id');
+        $department = Department::all()->sortByDesc('id');
+        return view('Department.department-list', compact('data', 'company', 'employee', 'branch', 'department'));
     }
 
     /**
@@ -39,6 +54,18 @@ class DepartmentController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'department_name'=>'unique:company_department,deleted_at,NULL'
+        ]);
+
+        Department::create($request->all());
+        $notification = array(
+            'message' => 'Department Created Successfully',
+            'alert-type' => 'success'
+        );
+
+
+        return redirect()->back()->with($notification);
     }
 
     /**
