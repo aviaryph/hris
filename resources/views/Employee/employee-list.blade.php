@@ -116,13 +116,22 @@
                                </div>
                                <div class="col-md-4">
                                    <label>Designation</label>
-                                   <select name="department" class="form-control">
+                                   <select name="designation" class="form-control">
                                        @foreach($designation as $designations):
                                             <option value="{{ $designations->id }}">{{ $designations->designation_name }}</option>
                                        @endforeach
                                    </select>
                                </div>
-                               <div class="col-md-6">
+                               <div class="col-md-4">
+                                   <label>Role</label>
+                                   <select name="role_id" class="form-control">
+                                       <option value="1">System Administrator</option>
+                                       <option value="2">Employee</option>
+                                   </select>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <div class="col-md-6 offset-3">
                                    <label>Employee No</label>
                                    <input type="text" class="form-control" name="employee_no" />
                                </div>
@@ -170,7 +179,8 @@
                                </div>
                                <div class="col-md-4">
                                    <label>Birthday</label>
-                                   <input type="date" class="form-control" name="birthday">
+                                   <input type="date" class="form-control" id="birthday" max="{{ date("Y-m-d") }}" onfocusout='dateToAge()' name="birthday">
+                                   <input class="form-control" type="text" name="age" id="age" readonly>
                                </div>
                                <div class="col-md-5">
                                    <label>Birth Place</label>
@@ -195,6 +205,22 @@
                                    </select>
                                </div>
                            </div>
+                           <div class="form-group row">
+                               <div class="col-md-6">
+                                   <label>Employment Status</label>
+                                   <select name="employment_status" class="form-control">
+                                       <option value="1">Regular</option>
+                                       <option value="2">Probationary</option>
+                                   </select>
+                               </div>
+                               <div class="col-md-6">
+                                   <label>Employment Type</label>
+                                   <select name="employee_type" class="form-control">
+                                       <option value="3">Full Time</option>
+                                       <option value="4">Part Time</option>
+                                   </select>
+                               </div>
+                           </div>
                            <h4>Credentials</h4>
                            <div class="form-group row">
                                <div class="col-md-4">
@@ -203,11 +229,11 @@
                                </div>
                                <div class="col-md-4">
                                    <label>Password</label>
-                                   <input type="text" class="form-control"  name="password">
+                                   <input type="password" class="form-control"  name="password">
                                </div>
                                <div class="col-md-4">
                                    <label>Confirm Password</label>
-                                   <input type="text" class="form-control"  name="confirm-password">
+                                   <input type="password" class="form-control"  name="confirm-password">
                                </div>
                            </div>
                        </div>
@@ -252,6 +278,24 @@
 
 @section('script')
     <script src="{{ asset('app-assets') }}/js/scripts/tables/datatables-extensions/datatable-responsive.min.js"></script>
-
+    <script>
+        function getMiddleInitial(){
+            var str     = $("#middlename").val();
+            var matches = str.match(/\b(\w)/g);
+            var acronym = matches.join('.');
+            $("#middleInitial").val(acronym + '.');
+        }
+        function dateToAge(){
+            var dateString = $("#birthday").val();
+            var today = new Date();
+            var birthDate = new Date(dateString);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            $("#age").val(age);
+        }
+    </script>
 
 @endsection

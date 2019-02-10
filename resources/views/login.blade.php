@@ -64,16 +64,17 @@
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
-                                    <form class="form-horizontal" action="" novalidate>
+                                    <form class="form-horizontal" method="POST" action="{{ url('login') }}" novalidate>
+                                        @csrf
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="text" class="form-control input-lg" id="user-name" placeholder="Your Username" tabindex="1" required data-validation-required-message= "Please enter your username.">
+                                            <input type="text" class="form-control input-lg" id="user-name" name="username" placeholder="Your Username" tabindex="1" required data-validation-required-message= "Please enter your username.">
                                             <div class="form-control-position">
                                                 <i class="ft-user"></i>
                                             </div>
                                             <div class="help-block font-small-3"></div>
                                         </fieldset>
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="password" class="form-control input-lg" id="password" placeholder="Enter Password" tabindex="2" required data-validation-required-message= "Please enter valid passwords.">
+                                            <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Enter Password" tabindex="2" required data-validation-required-message= "Please enter valid passwords.">
                                             <div class="form-control-position">
                                                 <i class="la la-key"></i>
                                             </div>

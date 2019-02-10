@@ -7,7 +7,10 @@ use App\Company;
 use App\department;
 use App\designation;
 use App\Employee;
+use App\EmployeeEmployment;
 use App\OfficeShift;
+use App\User;
+use function foo\func;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,7 +34,36 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->all());
+//        dd($request->all());
+
+//        try{
+//            DB::beginTransaction();
+//
+//            DB::commit();
+//        }
+//        catch (\Exception $e){
+//            DB::rollBack();
+//        }
+
+        DB::transaction(function () use ($request){
+            $employee_id = Employee::create($request->only(
+                "company_id", "employee_no", "firstname", "lastname", "middlename", "suffix", "email", "mobile_no", "telephone_no",
+                "gender", "birthday", "birthplace", 'age'))->id;
+
+            $request->merge(['employee_id'=>$employee_id]);
+
+            EmployeeEmployment::create($request->only(
+                'employee_id', 'department', 'branch', 'designation', 'date_hired', 'contract_start', 'schedule_type', 'employee_type',
+                'employment_status'
+            ));
+
+
+            User::create(
+                $request->only('username', 'password', 'employee_id', 'company_id', 'role_id')
+            );
+
+        });
+
 
         $notification = array(
             'message' => 'Employee Created Successfully',
