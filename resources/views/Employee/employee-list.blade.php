@@ -31,30 +31,34 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>ID</th>
+                                                <th>Company</th>
+                                                <th>Employee No</th>
                                                 <th>Name</th>
                                                 <th>Username</th>
+                                                <th>Gender</th>
                                                 <th>Email</th>
                                                 <th>Designation</th>
-                                                <th width="13%">Actions</th>
+                                                {{--<th width="13%">Actions</th>--}}
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            {{--@foreach($data as $row):--}}
-                                            {{--<tr>--}}
-                                                {{--<td>{{ $row->employee_id }}</td>--}}
-                                                {{--<td>{{ $row->firstname }}</td>--}}
-                                                {{--<td>{{ $row->username }}</td>--}}
-                                                {{--<td>{{ $row->email }}</td>--}}
-                                                {{--<td>{{ $row->designation_id }}</td>--}}
+                                            @foreach($data as $row):
+                                            <tr>
+                                                <td>{{ $row->company_name }}</td>
+                                                <td>{{ $row->employee_no }}</td>
+                                                <td>{{ $row->firstname . " " . $row->lastname }}</td>
+                                                <td>{{ $row->username }}</td>
+                                                <td>{{ $row->gender }}</td>
+                                                <td>{{ $row->email }}</td>
+                                                <td>{{ $row->designation_name }}</td>
                                                 {{--<td>--}}
                                                     {{--<div class="buttons-group">--}}
                                                         {{--<button class="btn btn-group btn-warning btn-xs" data-toggle="modal"  data-title="Create" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>--}}
                                                         {{--<button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-title="Edit" data-target="#delete{{ $row->id }}"><i class="la la-trash"></i> </button>--}}
                                                     {{--</div>--}}
                                                 {{--</td>--}}
-                                            {{--</tr>--}}
-                                            {{--@endforeach--}}
+                                            </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>

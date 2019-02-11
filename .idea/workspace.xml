@@ -2,140 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaa9b6a3-eccc-48dd-99a0-f40321a9daa7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hris.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/html/ltr/vertical-modern-menu-template/user-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/html/ltr/vertical-modern-menu-template/user-profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X095d29058ffc4c4e796908593d11100c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0ae2d8fe62977887ed2ed394e3dd3706.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0be73576c4381c5b2f77955cc68aa402.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0e032b3ac9a20c4554b07176c8ca685a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0f0b3ad44115f2cf2e632d7a8a181825.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X10140181451f3d69af494970ed757547.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X101615752fd996ecb7d7312133530227.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1051f8f5dcdf7b583497f694e0de6a13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X11506eeab726578e6dcb2cdeee7c18f9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X11953711268a606b3fdac2f24b8a5704.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X13e521d1b8babf978c6eb1f272b90cc7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X16dfb56d6967c55bd5eea73fe65d1fcc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X17d30caf2654fd351b7619762d14ec5c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1b9fe66050b21404a7b01c21c9583377.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1c4a1d24fd8f475412ed3e940522810d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1ca1edd0875e85e27373afc07560a6af.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1fae761af9c1173ebba4b08527fc5654.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X22d56bcde423c5016f7d9b46e42be8e5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X23262c7398cf1ab16f5343b851c072a2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2808be58ac4405563cc369ad118c2767.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X29f02f9a995bbad21a9f565f134564fa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2a9bac4dabe75c7faf902c910f45b3c7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2dbe3a11a0352dc58c09e0f15ae25391.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2e63613f72d7046ee6c51c9352af9a6d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2f402b4a65abd3a12abdc815186bb63e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2ff5c65f907f2b02dc8a6aeec2ec3111.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X31427d3d98b74748c32ec130b2897288.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X32d234919832a5ad5353ba4443540d1e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X357e5f9845ae2cd6e9fcde2a97e4aa84.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3d2e4adfc5fead4aaade5f69bbcbc582.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3e7483638a2c569660b9af15dc437a54.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X404dc0098af737be890bba9b52507ddd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4208af01d365ddc508702d184e12ab92.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X46acfa9159a88882f782f95159996aea.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X49a70f4ab3cb55abb8efe9d9c518915b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X49ccc4d7766c30322c2923bc61eef5f8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4bcd4fce527cfe80d3f6f9b607e5644d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4fb56ef20e2c7e40d36ffa6cd13b9ee5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X50fb4c74779bb0e3835e5f17d9d196b2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X54730eb9be4bb6834000f0d92910481b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X553b18594a574ed959b256a0997e4911.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X553c54a5c0d59f880584fe9d2c8fceca.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X563943d2ce860b94dc490721d60ed064.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X586d456ccedcf8fb1aefa4849a1a7b65.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5b3f925db46f5e93235c1bb5c8a6bc4e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5d584b979e1b80e20527023060aec39d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5dfb09e23f1d734d320e18680fdb37a0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5f31e42644c1c009e72320256a715f78.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X69d24a4239e19009c010962e17febe50.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6a591027d791e829128db5a817fdc061.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6af8fcd42f8d7fba81203d8773eb5fc9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6dd31d110d54b81034c802b351944781.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6edbe224cf7ba95d0f9cdd01ff270f8c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7084a4ba154c00281a8dff66e4361376.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X761194410624d4da800232cd98832c33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X766a7d5baed63990f6bd3faad8c9d562.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X794f508d6d313fd225f62870345c7370.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7c65267f0b14da4c3425e3f12f54f1d8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7eb4702022f44a9f732a018a2f6755ea.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8177e6cef7ae400cc27c5cf5ea40d8c2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8323f1a8134fa4dc3d71003fba0e21c6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8534d1f64799c4f0c0023b76c5126ecd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X87f9c8ad848c2c77069ff689c8cb3c44.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X881600139f89748aeb5c6b3873c45762.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X89f6e2040be188f044834810b69e3fa6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8b528c750436d701fcf30c89cdbbc61f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8b5fd686c89fc255b88d2ee3141def89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8e4cfd65cb9ecd9bc182f732456d154c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9233675ea7cf4b22ce74dc5d176aef5f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X92a3bd829149b6612c08a8280077b470.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X92a8d42f4e29e896d6ac1bcb65dc5090.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9439f5847720eaf6ecc9ad3ef76c742a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9677d11f14286d440a978603c4c01ae1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9855fed6784911129352806c936c70ba.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa0211117a9e6ef2766aae2670d828243.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa40586761464662c4d9808908f0c72cc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa4c76804cd6722765e1e833548cc24fd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa6d670bebcfd86167bcea8b36132809e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa6de1fe080f503182c36e6e06b084dac.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa824e978f1c39f5e66727de729142955.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa8ba67f32ff40cf385a8ad3ad3702237.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa979668f3718b1dacc72f43b04333a7d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xaa0cdf4da737f1ddd1b97009ba884b40.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xab24af2ae1cf88c843999aebc8cc7ccf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xab70d8414cd31e72112cbfa9f897b99e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xae244a420189a6e3b05eb89dda1cdfc7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xaeab371161cefdff8806bd8ea87d028e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb021a08cb603522e258821dc0e7a98be.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb22a9079daedadbedad0aa8e742d653d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb48dd41f6c5b7becb5ab2671ac996dcb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb6e7862d793a7293db7b5cbe6d0cd16e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb7bbd727f25e6354f744800c4cab2137.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb889506b3ba394441e85c60bac312232.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb96209168e7dd94d0e8ff3b8aea2b793.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xbae541ec58f89a6da3f28d29438dbbe6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xbb0fd518c01896f349cd84b53bd43c61.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc06ccc822054dcae6538e91b9e6ec274.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc40a93252b93a9de55ee42bfc59d5107.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc6c9f65281d58d0f819b4f60ccf38292.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xcbfe698bdbe6884440ebe5ed50dc490d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xcf40b6d48ae1365a6fbc9e3d84bcd785.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd0a3a7e30d6b3e970b8f8760237dc951.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd15feaf5ccb859a9181dd0fb7fe3d163.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd22e48144eeb811f20c33be4ab93e144.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd2dc3621ae0e628a3b7de9f217f3cd50.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd5199e8cad93baabf772f3acc398f432.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd5f7ea87937cd24d19f236998d55da7f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd66cd0c200b39a7285e2b7c77ef42706.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd814b845e90bbb1748ffc8337a5b8a61.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xda05c322a94dca4fbc4abe97b8509cf7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xde0a6f04f5fc5483075919e2e608bc25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xdef96e8a10e3b902a0f29359325f1c33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xdfaa6d5c84c0c53c655e51b3923bfadd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe2290bc1e9953dd8ae2aa98f15526b6f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe9daa0b83a237a900f98c4dce1beee6b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf0a586c8ca32197be75b8160a0e5f01a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf1944642e446acbeb08d630c4fa0e040.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf2bf6b179b555b31257155a789788c8e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf389bf4a3cb4afc6fc13b9bf53f032d1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf4e838ca45fbb52ddb09d38be8fab0bc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf6f5e3e04b1b32954aea4d7a8ccf6616.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xfb16587e5f5cd73dd7cf909428a28190.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xfb623c3bc161a6990a4cc7f07d13996f.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -163,25 +35,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state relative-caret-position="206">
+              <caret line="27" column="97" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="97" />
               <folding>
                 <element signature="e#40#55#0#PHP" expanded="true" />
-                <element signature="e#268#731#0#PHP" expanded="true" />
+                <element signature="e#844#2061#0#PHP" expanded="true" />
+                <element signature="e#1119#1857#2#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layout/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+            <state relative-caret-position="198">
+              <caret line="341" column="21" lean-forward="true" selection-start-line="341" selection-start-column="21" selection-end-line="341" selection-end-column="21" />
               <folding>
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
                 <element signature="e#0#5#0" expanded="true" />
                 <element signature="e#0#5#0" expanded="true" />
                 <element signature="e#0#5#0" expanded="true" />
@@ -207,19 +149,59 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+            <state relative-caret-position="115">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthenticationController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="190">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employee-list.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
+                <element signature="e#0#5#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,6 +233,8 @@
       <find>company</find>
       <find>age</find>
       <find>merge</find>
+      <find>Laborem</find>
+      <find>LABOREM</find>
     </findStrings>
     <replaceStrings>
       <replace>{{ assets('assets') }}</replace>
@@ -272,7 +256,6 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/contact.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" />
         <option value="$PROJECT_DIR$/resources/views/Location/location-list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/app.blade.php" />
         <option value="$PROJECT_DIR$/public/app-assets/js/scripts/forms/select/form-select2.min.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -301,15 +284,18 @@
         <option value="$PROJECT_DIR$/public/html/ltr/vertical-modern-menu-template/user-profile.html" />
         <option value="$PROJECT_DIR$/app/Employee.php" />
         <option value="$PROJECT_DIR$/app/EmployeeEmployment.php" />
-        <option value="$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/api.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/reports-pending.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/app.blade.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/api.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
       </list>
     </option>
   </component>
@@ -452,6 +438,13 @@
             <path>
               <item name="hris" type="b2602c69:ProjectViewProjectNode" />
               <item name="hris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hris" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -522,23 +515,24 @@
       <workItem from="1549690280585" duration="29212000" />
       <workItem from="1549776694204" duration="4101000" />
       <workItem from="1549787201259" duration="2927000" />
-      <workItem from="1549807496651" duration="7706000" />
+      <workItem from="1549807496651" duration="9711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72831000" />
+    <option name="totallyTimeSpent" value="74836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32510886" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.3280116" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32510886" />
       <window_info anchor="right" id="Remote Host" order="4" weight="0.32931727" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1854083" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -566,34 +560,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Company/company-list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="111" column="74" lean-forward="true" selection-start-line="111" selection-start-column="74" selection-end-line="111" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DepartmentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -612,13 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="147" column="56" selection-start-line="147" selection-start-column="56" selection-end-line="147" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="1280" column="77" selection-start-line="1280" selection-start-column="77" selection-end-line="1280" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -839,35 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="215" column="50" lean-forward="true" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-            <element signature="e#0#5#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -881,17 +811,6 @@
           <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding>
             <element signature="e#662#780#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="194" column="22" lean-forward="true" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
-          <folding>
-            <element signature="e#6604#6607#0#PHP" expanded="true" />
-            <element signature="e#6750#6753#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -933,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Authentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../aria/app/Http/Controllers/AuthenticationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -957,28 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="56" column="35" lean-forward="true" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-            <element signature="e#268#731#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+        <state relative-caret-position="253">
+          <caret line="105" column="209" selection-start-line="105" selection-start-column="209" selection-end-line="105" selection-end-column="209" />
           <folding>
             <element signature="e#0#5#0" expanded="true" />
             <element signature="e#0#5#0" expanded="true" />
@@ -998,15 +892,319 @@
             <element signature="e#0#5#0" expanded="true" />
             <element signature="e#0#5#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="341" column="21" lean-forward="true" selection-start-line="341" selection-start-column="21" selection-end-line="341" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="172" column="79" selection-start-line="172" selection-start-column="79" selection-end-line="172" selection-end-column="79" />
+          <folding>
+            <element signature="e#6604#6607#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="190">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Employee/employee-list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+            <element signature="e#0#5#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="27" column="97" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="97" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+            <element signature="e#844#2061#0#PHP" expanded="true" />
+            <element signature="e#1119#1857#2#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

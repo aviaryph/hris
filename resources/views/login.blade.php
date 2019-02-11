@@ -57,10 +57,10 @@
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header border-0">
                                 <div class="card-title text-center">
-                                    <p>WELCOME TO LABOREM HRIS</p>
+                                    <p>WELCOME TO HRIS</p>
                                     {{--<img src="{{ asset('app-assets') }}/images/logo/logo-dark.png" alt="branding logo">--}}
                                 </div>
-                                <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Login with LABOREM HRIS</span></h6>
+                                <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Login with HRIS</span></h6>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
@@ -103,7 +103,7 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 
 <footer class="footer fixed-bottom footer-dark navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="" target="_blank">LABOREM HRIS </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span></p>
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="" target="_blank">HRIS </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span></p>
 </footer>
 
 <!-- BEGIN VENDOR JS-->

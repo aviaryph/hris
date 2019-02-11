@@ -19,7 +19,7 @@ class AuthenticationController extends Controller
 
         }
         else {
-
+            dd("Error");
         }
 
     }

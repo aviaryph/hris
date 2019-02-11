@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('login');
 });
-Route::post('login', 'AuthenticationController@login');
+Route::get('login', 'AuthenticationController@login');
 
 Route::resource('dashboard', 'DashboardController');
 Route::resource('company', 'CompanyController');

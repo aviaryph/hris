@@ -18,7 +18,16 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        $data = "";
+        $data = DB::table('employee')
+                ->select('company.id', 'company.name as company_name', 'company_designation.id', 'company_designation.designation_name',
+                    'employee.id as employee_id', 'employee.employee_no', 'employee.firstname', 'employee.lastname',
+                    'employee.current_address', 'employee.company_id', 'employee.gender', 'employee.email', 'employee_employment.designation',
+                    'employee_employment.employee_id', 'users.username', 'users.employee_id')
+                ->join('employee_employment', 'employee_employment.employee_id', '=', 'employee.id')
+                ->join('company', 'company.id', '=', 'employee.company_id')
+                ->join('company_designation', 'company_designation.id', '=', 'employee_employment.designation')
+                ->join('users', 'users.employee_id', '=', 'employee.id')
+                ->get();
         $company = Company::all()->sortByDesc('id');
         $branch = Branch::all()->sortByDesc('id');
         $schedule = OfficeShift::all()->sortByDesc('id');
