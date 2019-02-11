@@ -23,7 +23,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Department List</h4>
+                                    <h4 class="card-title">Employee Awards List</h4>
 
                                 </div>
                                 <div class="card-content collapse show">
@@ -51,8 +51,8 @@
                                                 <td>{{ $row->award_month_year }}</td>
                                                 <td>
                                                     <div class="buttons-group">
-                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->department_id }}"><i class="la la-edit"></i> </button>
-                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->department_id }}"><i class="la la-trash"></i> </button>
+                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->employee_id }}"><i class="la la-edit"></i> </button>
+                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->employee_id }}"><i class="la la-trash"></i> </button>
                                                     </div>
 
                                                 </td>
