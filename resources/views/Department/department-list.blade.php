@@ -31,24 +31,18 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>Employee ID</th>
-                                                <th>Employee Name</th>
-                                                <th>Award Name</th>
-                                                <th>Gift</th>
-                                                <th>Cash Price</th>
-                                                <th>Month & Year</th>
+                                                <th>Department Name</th>
+                                                <th>Department Head</th>
+                                                <th>Branch</th>
                                                 <th width="13%">Actions</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->employee_id }}</td>
+                                                <td>{{ $row->department_name }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
-                                                <td>{{ $row->website }}</td>
-                                                <td>{{ $row->company_type }}</td>
-                                                <td>{!! $row->address_1 !!}</td>
-                                                <td>{{ $row->city }}</td>
+                                                <td>{{ $row->location_name }}</td>
                                                 <td>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->department_id }}"><i class="la la-edit"></i> </button>
@@ -139,26 +133,54 @@
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Department Name</label>
-                                    <input type="text" class="form-control" name="department_name" required value="{{ $row->department_name }}">
+                                    <label>Company Code</label>
+                                    <input type="text" class="form-control" id="company_code" name="company_code" value="{{ $row->company_code }}" required readonly>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Branch Name</label>
-                                    <select name="branch_id" class="form-control" id="branch">
-                                        @foreach($branch as $branchs):
-                                        <option value="{{ $branchs->id }}" {{ $branchs-> }}>{{ $branchs->location_name }}</option>
-                                        @endforeach
+                                <div class="col-md-12">
+                                    <label>Company Name</label>
+                                    <input type="text" class="form-control" id="company_name" value="{{ $row->name }}" name="name" required >
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-4">
+                                    <label>Business Email</label>
+                                    <input type="email" class="form-control" value="{{ $row->email }}" name="email" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Company Type</label>
+                                    <select name="company_type" class="form-control">
+                                        <option value="Corporate">Corporate</option>
                                     </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <label>Department Head</label>
-                                    <select name="department_head" class="form-control" id="department">
-                                        @foreach($employee as $employees):
-                                        <option value="{{ $employees->id }}">{{ $employees->firstname . " " . $employees->lastname }}</option>
-                                        @endforeach
-                                    </select>
+                                <div class="col-md-4">
+                                    <label>Website URL</label>
+                                    <input type="text" class="form-control" value="{{ $row->website_url }}" name="website_url" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Address Line 1</label>
+                                    <textarea name="address_1" class="form-control" rows="4">{{ $row->address_1 }}</textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Address Line 2</label>
+                                    <textarea name="address_2" class="form-control" rows="4">{{ $row->address_2 }}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-4">
+                                    <label>City</label>
+                                    <input class="form-control" type="text" name="city" value="{{ $row->city }}" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <label>State</label>
+                                    <input class="form-control" type="text" name="state" value="{{ $row->state }}" required />
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Zip Code</label>
+                                    <input class="form-control" type="text" name="zipcode" value="{{ $row->zipcode }}" required />
                                 </div>
                             </div>
                         </div>

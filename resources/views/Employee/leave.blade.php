@@ -5,7 +5,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Employee Award List</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Employee Leave List</h3>
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="btn-group float-md-right">
@@ -18,12 +18,16 @@
             </div>
             <div class="content-body"><!-- Configuration option table -->
 
+
+
+
+
                 <section id="configuration">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Employee Award List</h4>
+                                    <h4 class="card-title">Employee Leave List</h4>
 
                                 </div>
                                 <div class="card-content collapse show">
@@ -31,28 +35,24 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>Employee ID</th>
                                                 <th>Employee Name</th>
-                                                <th>Award Type</th>
-                                                <th>Award Name</th>
-                                                <th>Award Date</th>
-                                                <th>Gift</th>
-                                                <th>Cash Price</th>
-                                                <th>Month & Year</th>
+                                                <th>Leave Type</th>
+                                                <th>Request Duration</th>
+                                                <th>Applied On</th>
+                                                <th>Reason</th>
+                                                <th>Status</th>
                                                 <th width="13%">Actions</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->employee_no }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
-                                                <td>{{ $row->award_type }}</td>
-                                                <td>{{ $row->award_information }}</td>
-                                                <td>{{ $row->award_date }}</td>
-                                                <td>{{ $row->gift_item }}</td>
-                                                <td>{!! $row->cash_price !!}</td>
-                                                <td>{{ $row->award_month_year }}</td>
+                                                <td>{{ $row->leave_type }}</td>
+                                                <td>{{ $row->from_date . " " . $row->to_date }}</td>
+                                                <td>{{ $row->created_at }}</td>
+                                                <td>{{ $row->reason }}</td>
+                                                <td>{{ $row->status }}</td>
                                                 <td>
                                                     <div class="buttons-group">
                                                         <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>
@@ -85,7 +85,7 @@
     <div class="modal fade" id="create" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="employee-award" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">New Award Record</h4>
                     </div>
@@ -104,54 +104,41 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Award Type</label>
-                                    <select name="award_type_id" class="form-control" id="award_type_id"  required  >
-                                        @foreach($award_type as $award_types):
-                                        <option value="{{ $award_types->id }}">{{  $award_types->value }}</option>
+                                <div class="col-md-12">
+                                    <label>Leave Type</label>
+                                    <select name="leave_type_id" class="form-control" id="leave_type_id"  required  >
+                                        @foreach($leave_type as $leave_types):
+                                        <option value="{{ $leave_types->id }}">{{  $leave_types->value }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <label>Date</label>
-                                    <input type="date" class="form-control" name="award_date" required>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Start Date</label>
+                                    <input type="date" class="form-control" name="from_date" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Month & Year</label>
-                                    <input type="text" class="form-control" name="award_month_year" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Gift</label>
-                                    <input type="text" class="form-control" name="gift_item" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Cash</label>
-                                    <input type="number" class="form-control" name="cash_price" required>
+                                    <label>End Date</label>
+                                    <input type="date" class="form-control" name="to_date" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Award Information</label>
-                                    <input type="text" class="form-control" name="award_information" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Description</label>
-                                    <input type="text" class="form-control" name="description" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Photo</label>
-                                    <input type="text" class="form-control" name="award_photo" required>
+                                    <label>Reason</label>
+                                    <input type="text" class="form-control" name="reason" required>
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" name="remarks" required>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -169,19 +156,18 @@
     <div class="modal fade" id="edit{{ $row->id }}" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="employee-award/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Edit Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
                         @method('PATCH')
-
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     <label>Employee</label>
-                                    <select name="employee_id" class="form-control" id="employee_idU"  required >
+                                    <select name="employee_id" class="form-control" id="employee_id"  required >
                                         @foreach($employee as $employees):
                                         <option value="{{ $employees->id }}" {{ $employees->id == $row->employee_id? "Selected": "" }}>{{  $employees->firstname . " " . $employees->lastname }}</option>
                                         @endforeach
@@ -189,55 +175,44 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Award Type</label>
-                                    <select name="award_type_id" class="form-control" id="award_type_idU"  required  >
-                                        @foreach($award_type as $award_types):
-                                        <option value="{{ $award_types->id }}" {{ $award_types->id == $row->award_type_id? "Selected": "" }}>{{  $award_types->value }}</option>
+                                <div class="col-md-12">
+                                    <label>Leave Type</label>
+                                    <select name="leave_type_id" class="form-control" id="leave_type_id"  required  >
+                                        @foreach($leave_type as $leave_types):
+                                        <option value="{{ $leave_types->id }}" {{ $leave_types->id == $row->leave_type_id? "Selected": "" }}>{{  $leave_types->value }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <label>Date</label>
-                                    <input type="date" class="form-control" name="award_date" value="{{ $row->award_date }}"   required>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Start Date</label>
+                                    <input type="date" class="form-control" name="from_date" value="{{ $row->from_date }}"  required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Month & Year</label>
-                                    <input type="text" class="form-control" name="award_month_year" value="{{ $row->award_month_year }}"  required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Gift</label>
-                                    <input type="text" class="form-control" name="gift_item" value="{{ $row->gift_item }}"  required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Cash</label>
-                                    <input type="number" class="form-control" name="cash_price" value="{{ $row->cash_price }}"  required>
+                                    <label>End Date</label>
+                                    <input type="date" class="form-control" name="to_date" value="{{ $row->to_date }}"  required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Award Information</label>
-                                    <input type="text" class="form-control" name="award_information" value="{{ $row->award_information }}"  required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Description</label>
-                                    <input type="text" class="form-control" name="description" value="{{ $row->description }}"  required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Photo</label>
-                                    <input type="text" class="form-control" name="award_photo" value="{{ $row->award_photo }}"  required>
+                                    <label>Reason</label>
+                                    <input type="text" class="form-control" name="reason" value="{{ $row->reason }}"  required>
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" name="remarks" value="{{ $row->remarks }}"  required>
+                                </div>
+                            </div>
                         </div>
+
+
 
                     </div>
                     <div class="modal-footer">
@@ -254,7 +229,7 @@
     <div class="modal fade" id="delete{{ $row->id }}" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <form action="employee-award/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Delete Record</h4>
                     </div>
@@ -280,12 +255,12 @@
 @section('script')
     <script src="{{ asset('app-assets') }}/js/scripts/tables/datatables-extensions/datatable-responsive.min.js"></script>
     <script>
-        $("#award_type_id, #employee_id").select2({
+        $("#leave_type_id, #employee_id").select2({
             width:"100%",
             placeholder: "Select",
             maximumSelectionSize: 1,
         });
-        $("#award_type_idU, #employee_idU").select2({
+        $("#leave_type_idU, #employee_idU").select2({
             width:"100%",
             placeholder: "Select",
             maximumSelectionSize: 1,
