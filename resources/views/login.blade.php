@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
-<!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/login-advanced.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Feb 2019 06:51:15 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title>Login Page - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin Dashboard</title>
+    <title>LABOREM HRIS </title>
     <link rel="apple-touch-icon" href="{{ asset('app-assets') }}/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
@@ -58,23 +57,24 @@
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header border-0">
                                 <div class="card-title text-center">
-                                    <p>WELCOME TO LABOREM HRIS</p>
+                                    <p>WELCOME TO HRIS</p>
                                     {{--<img src="{{ asset('app-assets') }}/images/logo/logo-dark.png" alt="branding logo">--}}
                                 </div>
-                                <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Login with LABOREM HRIS</span></h6>
+                                <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Login with HRIS</span></h6>
                             </div>
                             <div class="card-content">
                                 <div class="card-body">
-                                    <form class="form-horizontal" action="" novalidate>
+                                    <form class="form-horizontal" method="POST" action="{{ url('login') }}" novalidate>
+                                        @csrf
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="text" class="form-control input-lg" id="user-name" placeholder="Your Username" tabindex="1" required data-validation-required-message= "Please enter your username.">
+                                            <input type="text" class="form-control input-lg" id="user-name" name="username" placeholder="Your Username" tabindex="1" required data-validation-required-message= "Please enter your username.">
                                             <div class="form-control-position">
                                                 <i class="ft-user"></i>
                                             </div>
                                             <div class="help-block font-small-3"></div>
                                         </fieldset>
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="password" class="form-control input-lg" id="password" placeholder="Enter Password" tabindex="2" required data-validation-required-message= "Please enter valid passwords.">
+                                            <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Enter Password" tabindex="2" required data-validation-required-message= "Please enter valid passwords.">
                                             <div class="form-control-position">
                                                 <i class="la la-key"></i>
                                             </div>
@@ -89,7 +89,7 @@
                                             </div>
                                             <div class="col-md-6 col-12 text-center text-md-right"><a href="recover-password.html" class="card-link">Forgot Password?</a></div>
                                         </div>
-                                        <button type="button" onclick="window.open('dashboard', '_self')" class="btn btn-danger btn-block btn-lg"><i class="ft-unlock"></i> Login</button>
+                                        <button type="submit" class="btn btn-danger btn-block btn-lg"><i class="ft-unlock"></i> Login</button>
                                     </form>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 
 <footer class="footer fixed-bottom footer-dark navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="" target="_blank">LABOREM HRIS </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span></p>
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright  &copy; 2018 <a class="text-bold-800 grey darken-2" href="" target="_blank">HRIS </a>, All rights reserved. </span><span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span></p>
 </footer>
 
 <!-- BEGIN VENDOR JS-->
@@ -123,5 +123,4 @@
 <!-- END PAGE LEVEL JS-->
 </body>
 
-<!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/login-advanced.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Feb 2019 06:51:15 GMT -->
 </html>

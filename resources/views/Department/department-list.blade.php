@@ -141,6 +141,13 @@
                                 <div class="col-md-12">
                                     <label>Company Name</label>
                                     <input type="text" class="form-control" id="company_name" value="{{ $row->name }}" name="name" required >
+                                <div class="col-md-6">
+                                    <label>Branch Name</label>
+                                    <select name="branch_id" class="form-control" id="branch">
+                                        @foreach($branch as $branchs):
+                                        <option value="{{ $branchs->id }}">{{ $branchs->location_name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">

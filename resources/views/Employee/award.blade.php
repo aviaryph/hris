@@ -24,7 +24,6 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Employee Award List</h4>
-
                                 </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
