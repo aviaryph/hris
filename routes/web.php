@@ -33,3 +33,5 @@ Route::resource('employee-warning', 'EmployeeWarningController');
 Route::resource('employee-terminations', 'EmployeeTerminationController');
 Route::resource('employee-lastlogin', 'EmployeeLastLoginController');
 Route::resource('employee-exit', 'EmployeeExitController');
+Route::resource('employee-leave', 'EmployeeLeaveController');
+Route::resource('employee-profile', 'EmployeeProfileController');

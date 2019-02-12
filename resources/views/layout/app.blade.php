@@ -22,6 +22,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/js/gallery/photo-swipe/photoswipe.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/js/gallery/photo-swipe/default-skin/default-skin.css">
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/css/forms/icheck/custom.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/js/gallery/photo-swipe/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/vendors/js/gallery/photo-swipe/default-skin/default-skin.css">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('app-assets') }}/css/app.min.css">
@@ -382,6 +386,7 @@
 <script src="{{ asset('app-assets') }}/vendors/js/pickers/daterange/daterangepicker.js"></script>
 <script src="{{ asset('app-assets') }}/vendors/js/forms/validation/jquery.validate.min.js"></script>
 <script src="{{ asset('app-assets') }}/vendors/js/extensions/toastr.min.js"></script>
+
 <script src="{{ asset('app-assets') }}/vendors/js/forms/icheck/icheck.min.js"></script>
 <script src="{{ asset('app-assets') }}/vendors/js/charts/gmaps.min.js"></script>
 <script src="{{ asset('app-assets') }}/vendors/js/gallery/masonry/masonry.pkgd.min.js"></script>
@@ -406,6 +411,8 @@
 
 
 <!-- END PAGE LEVEL JS-->
+
+
 <script>
     toastr.options = {
         "closeButton": true,

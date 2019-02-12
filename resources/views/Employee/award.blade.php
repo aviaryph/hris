@@ -5,7 +5,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Award List</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Employee Award List</h3>
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="btn-group float-md-right">
@@ -23,8 +23,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Employee Awards List</h4>
-
+                                    <h4 class="card-title">Employee Award List</h4>
                                 </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
@@ -33,7 +32,9 @@
                                             <tr>
                                                 <th>Employee ID</th>
                                                 <th>Employee Name</th>
+                                                <th>Award Type</th>
                                                 <th>Award Name</th>
+                                                <th>Award Date</th>
                                                 <th>Gift</th>
                                                 <th>Cash Price</th>
                                                 <th>Month & Year</th>
@@ -43,16 +44,18 @@
                                             <tbody>
                                             @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->employee_id }}</td>
+                                                <td>{{ $row->employee_no }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
+                                                <td>{{ $row->award_type }}</td>
                                                 <td>{{ $row->award_information }}</td>
+                                                <td>{{ $row->award_date }}</td>
                                                 <td>{{ $row->gift_item }}</td>
                                                 <td>{!! $row->cash_price !!}</td>
                                                 <td>{{ $row->award_month_year }}</td>
                                                 <td>
                                                     <div class="buttons-group">
-                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->employee_id }}"><i class="la la-edit"></i> </button>
-                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->employee_id }}"><i class="la la-trash"></i> </button>
+                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>
+                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->id }}"><i class="la la-trash"></i> </button>
                                                     </div>
 
                                                 </td>
@@ -78,9 +81,8 @@
         </a>
     </div>
 
-
     <div class="modal fade" id="create" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <form action="employee-award" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
@@ -88,21 +90,30 @@
                     </div>
                     <div class="modal-body">
                         @csrf
+
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     <label>Employee</label>
-                                    <input type="text" class="form-control" name="employee_id" required>
+                                    <select name="employee_id" class="form-control" id="employee_id"  required >
+                                        @foreach($employee as $employees):
+                                        <option value="{{ $employees->id }}">{{  $employees->firstname . " " . $employees->lastname }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
                                     <label>Award Type</label>
-                                    <input type="text" class="form-control" name="award_type_id" required>
+                                    <select name="award_type_id" class="form-control" id="award_type_id"  required  >
+                                        @foreach($award_type as $award_types):
+                                        <option value="{{ $award_types->id }}">{{  $award_types->value }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label>Date</label>
-                                    <input type="date" class="form-control" name="created_at" required>
+                                    <input type="date" class="form-control" name="award_date" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -118,7 +129,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>Cash</label>
-                                    <input type="text" class="form-control" name="cash_price" required>
+                                    <input type="number" class="form-control" name="cash_price" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -141,16 +152,126 @@
                             </div>
 
                         </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
-                            <button type="submit" class="btn btn-info">Save Record</button>
-                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                        <button type="submit" class="btn btn-info">Save Record</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
 
+    @foreach($data as $row):
+    <div class="modal fade" id="edit{{ $row->id }}" role="dialog">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <form action="employee-award/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="title" id="defaultModalLabel">Edit Record</h4>
+                    </div>
+                    <div class="modal-body">
+                        @csrf
+                        @method('PATCH')
+
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Employee</label>
+                                    <select name="employee_id" class="form-control" id="employee_idU"  required >
+                                        @foreach($employee as $employees):
+                                        <option value="{{ $employees->id }}" {{ $employees->id == $row->employee_id? "Selected": "" }}>{{  $employees->firstname . " " . $employees->lastname }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label>Award Type</label>
+                                    <select name="award_type_id" class="form-control" id="award_type_idU"  required  >
+                                        @foreach($award_type as $award_types):
+                                        <option value="{{ $award_types->id }}" {{ $award_types->id == $row->award_type_id? "Selected": "" }}>{{  $award_types->value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Date</label>
+                                    <input type="date" class="form-control" name="award_date" value="{{ $row->award_date }}"   required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Month & Year</label>
+                                    <input type="text" class="form-control" name="award_month_year" value="{{ $row->award_month_year }}"  required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label>Gift</label>
+                                    <input type="text" class="form-control" name="gift_item" value="{{ $row->gift_item }}"  required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Cash</label>
+                                    <input type="number" class="form-control" name="cash_price" value="{{ $row->cash_price }}"  required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Award Information</label>
+                                    <input type="text" class="form-control" name="award_information" value="{{ $row->award_information }}"  required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Description</label>
+                                    <input type="text" class="form-control" name="description" value="{{ $row->description }}"  required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Photo</label>
+                                    <input type="text" class="form-control" name="award_photo" value="{{ $row->award_photo }}"  required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                        <button type="submit" class="btn btn-info">Update Record</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endforeach
+
+    @foreach($data as $row):
+    <div class="modal fade" id="delete{{ $row->id }}" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <form action="employee-award/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h4 class="title" id="defaultModalLabel">Delete Record</h4>
+                    </div>
+                    <div class="modal-body">
+                        @csrf
+                        @method('DELETE')
+                        <p>Are you sure you want to delete this record?</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">Cancel</button>
+                        <button type="submit" class="btn btn-warning">Delete Record</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endforeach
 
 
 @endsection
@@ -158,31 +279,15 @@
 @section('script')
     <script src="{{ asset('app-assets') }}/js/scripts/tables/datatables-extensions/datatable-responsive.min.js"></script>
     <script>
-        $("#department, #branch").select2();
+        $("#award_type_id, #employee_id").select2({
+            width:"100%",
+            placeholder: "Select",
+            maximumSelectionSize: 1,
+        });
+        $("#award_type_idU, #employee_idU").select2({
+            width:"100%",
+            placeholder: "Select",
+            maximumSelectionSize: 1,
+        });
     </script>
-    <script>
-
-        function getIntials() {
-
-            let comCode = $("#company_name").val();
-            var initials = comCode.match(/\b\w/g) || [];
-            initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
-
-
-            $("#company_code").val(initials + "-<?php echo date('ymds'); ?>");
-
-
-        }
-
-    </script>
-    <script>
-        function getMiddleInitial(){
-            var str     = $("#middlename").val();
-            var matches = str.match(/\b(\w)/g);
-            var acronym = matches.join('.');
-            $("#middleInitial").val(acronym + '.');
-        }
-
-    </script>
-
 @endsection

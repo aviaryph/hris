@@ -5,7 +5,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
-                    <h3 class="content-header-title mb-0 d-inline-block">Department List</h3>
+                    <h3 class="content-header-title mb-0 d-inline-block">Employee Leave List</h3>
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="btn-group float-md-right">
@@ -18,12 +18,16 @@
             </div>
             <div class="content-body"><!-- Configuration option table -->
 
+
+
+
+
                 <section id="configuration">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Department List</h4>
+                                    <h4 class="card-title">Employee Leave List</h4>
 
                                 </div>
                                 <div class="card-content collapse show">
@@ -31,22 +35,28 @@
                                         <table class="table table-striped table-bordered dataex-res-configuration">
                                             <thead>
                                             <tr>
-                                                <th>Department Name</th>
-                                                <th>Department Head</th>
-                                                <th>Branch</th>
+                                                <th>Employee Name</th>
+                                                <th>Leave Type</th>
+                                                <th>Request Duration</th>
+                                                <th>Applied On</th>
+                                                <th>Reason</th>
+                                                <th>Status</th>
                                                 <th width="13%">Actions</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @foreach($data as $row):
                                             <tr>
-                                                <td>{{ $row->department_name }}</td>
                                                 <td>{{ $row->firstname . " " . $row->lastname }}</td>
-                                                <td>{{ $row->location_name }}</td>
+                                                <td>{{ $row->leave_type }}</td>
+                                                <td>{{ $row->from_date . " " . $row->to_date }}</td>
+                                                <td>{{ $row->created_at }}</td>
+                                                <td>{{ $row->reason }}</td>
+                                                <td>{{ $row->status }}</td>
                                                 <td>
                                                     <div class="buttons-group">
-                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->department_id }}"><i class="la la-edit"></i> </button>
-                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->department_id }}"><i class="la la-trash"></i> </button>
+                                                        <button class="btn btn-group btn-warning btn-xs" data-toggle="modal" data-target="#edit{{ $row->id }}"><i class="la la-edit"></i> </button>
+                                                        <button class="btn btn-group btn-danger btn-xs" data-toggle="modal" data-target="#delete{{ $row->id }}"><i class="la la-trash"></i> </button>
                                                     </div>
 
                                                 </td>
@@ -72,39 +82,61 @@
         </a>
     </div>
 
-
     <div class="modal fade" id="create" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="department" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
-                        <h4 class="title" id="defaultModalLabel">New Department Record</h4>
+                        <h4 class="title" id="defaultModalLabel">New Award Record</h4>
                     </div>
                     <div class="modal-body">
                         @csrf
+
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Department Name</label>
-                                    <input type="text" class="form-control" name="department_name" required>
+                                    <label>Employee</label>
+                                    <select name="employee_id" class="form-control" id="employee_id"  required >
+                                        @foreach($employee as $employees):
+                                        <option value="{{ $employees->id }}">{{  $employees->firstname . " " . $employees->lastname }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label>Branch Name</label>
-                                    <select name="branch_id" class="form-control" id="branch">
-                                        @foreach($branch as $branchs):
-                                            <option value="{{ $branchs->id }}">{{ $branchs->location_name }}</option>
+                                <div class="col-md-12">
+                                    <label>Leave Type</label>
+                                    <select name="leave_type_id" class="form-control" id="leave_type_id"  required  >
+                                        @foreach($leave_type as $leave_types):
+                                        <option value="{{ $leave_types->id }}">{{  $leave_types->value }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-6">
-                                    <label>Department Head</label>
-                                    <select name="department_head" class="form-control" id="department">
-                                        @foreach($employee as $employees):
-                                            <option value="{{ $employees->id }}">{{ $employees->firstname . " " . $employees->lastname }}</option>
-                                        @endforeach
-                                    </select>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Start Date</label>
+                                    <input type="date" class="form-control" name="from_date" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>End Date</label>
+                                    <input type="date" class="form-control" name="to_date" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Reason</label>
+                                    <input type="text" class="form-control" name="reason" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" name="remarks" required>
                                 </div>
                             </div>
                         </div>
@@ -119,11 +151,12 @@
         </div>
     </div>
 
+
     @foreach($data as $row):
-    <div class="modal fade" id="edit{{ $row->department_id }}" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" id="edit{{ $row->id }}" role="dialog">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="department/{{ $row->department_id }}" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Edit Record</h4>
                     </div>
@@ -133,64 +166,53 @@
                         <div class="col-md-12">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Company Code</label>
-                                    <input type="text" class="form-control" id="company_code" name="company_code" value="{{ $row->company_code }}" required readonly>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label>Company Name</label>
-                                    <input type="text" class="form-control" id="company_name" value="{{ $row->name }}" name="name" required >
-                                <div class="col-md-6">
-                                    <label>Branch Name</label>
-                                    <select name="branch_id" class="form-control" id="branch">
-                                        @foreach($branch as $branchs):
-                                        <option value="{{ $branchs->id }}">{{ $branchs->location_name }}</option>
+                                    <label>Employee</label>
+                                    <select name="employee_id" class="form-control" id="employee_id"  required >
+                                        @foreach($employee as $employees):
+                                        <option value="{{ $employees->id }}" {{ $employees->id == $row->employee_id? "Selected": "" }}>{{  $employees->firstname . " " . $employees->lastname }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>Business Email</label>
-                                    <input type="email" class="form-control" value="{{ $row->email }}" name="email" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Company Type</label>
-                                    <select name="company_type" class="form-control">
-                                        <option value="Corporate">Corporate</option>
+                                <div class="col-md-12">
+                                    <label>Leave Type</label>
+                                    <select name="leave_type_id" class="form-control" id="leave_type_id"  required  >
+                                        @foreach($leave_type as $leave_types):
+                                        <option value="{{ $leave_types->id }}" {{ $leave_types->id == $row->leave_type_id? "Selected": "" }}>{{  $leave_types->value }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Website URL</label>
-                                    <input type="text" class="form-control" value="{{ $row->website_url }}" name="website_url" />
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Start Date</label>
+                                    <input type="date" class="form-control" name="from_date" value="{{ $row->from_date }}"  required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label>Address Line 1</label>
-                                    <textarea name="address_1" class="form-control" rows="4">{{ $row->address_1 }}</textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <label>Address Line 2</label>
-                                    <textarea name="address_2" class="form-control" rows="4">{{ $row->address_2 }}</textarea>
+                                    <label>End Date</label>
+                                    <input type="date" class="form-control" name="to_date" value="{{ $row->to_date }}"  required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label>City</label>
-                                    <input class="form-control" type="text" name="city" value="{{ $row->city }}" required />
+                                <div class="col-md-12">
+                                    <label>Reason</label>
+                                    <input type="text" class="form-control" name="reason" value="{{ $row->reason }}"  required>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>State</label>
-                                    <input class="form-control" type="text" name="state" value="{{ $row->state }}" required />
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Zip Code</label>
-                                    <input class="form-control" type="text" name="zipcode" value="{{ $row->zipcode }}" required />
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" name="remarks" value="{{ $row->remarks }}"  required>
                                 </div>
                             </div>
                         </div>
+
+
 
                     </div>
                     <div class="modal-footer">
@@ -204,10 +226,10 @@
     @endforeach
 
     @foreach($data as $row):
-    <div class="modal fade" id="delete{{ $row->department_id }}" tabindex="-1" role="dialog">
+    <div class="modal fade" id="delete{{ $row->id }}" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <form action="department/{{ $row->department_id }}" method="POST" enctype="multipart/form-data">
+                <form action="employee-leave/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Delete Record</h4>
                     </div>
@@ -233,41 +255,15 @@
 @section('script')
     <script src="{{ asset('app-assets') }}/js/scripts/tables/datatables-extensions/datatable-responsive.min.js"></script>
     <script>
-        $("#department, #branch").select2();
+        $("#leave_type_id, #employee_id").select2({
+            width:"100%",
+            placeholder: "Select",
+            maximumSelectionSize: 1,
+        });
+        $("#leave_type_idU, #employee_idU").select2({
+            width:"100%",
+            placeholder: "Select",
+            maximumSelectionSize: 1,
+        });
     </script>
-    <script>
-
-        function getIntials() {
-
-            let comCode = $("#company_name").val();
-            var initials = comCode.match(/\b\w/g) || [];
-            initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
-
-
-            $("#company_code").val(initials + "-<?php echo date('ymds'); ?>");
-
-
-        }
-
-    </script>
-    <script>
-        function getMiddleInitial(){
-            var str     = $("#middlename").val();
-            var matches = str.match(/\b(\w)/g);
-            var acronym = matches.join('.');
-            $("#middleInitial").val(acronym + '.');
-        }
-        function dateToAge(){
-            var dateString = $("#birthday").val();
-            var today = new Date();
-            var birthDate = new Date(dateString);
-            var age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            $("#age").val(age+'');
-        }
-    </script>
-
 @endsection
