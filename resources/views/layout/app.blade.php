@@ -437,7 +437,8 @@
 <script src="{{ asset('app-assets') }}/js/scripts/gallery/photo-swipe/photoswipe-script.min.js"></script>
 <script src="{{ asset('app-assets') }}/js/scripts/pages/timeline.min.js"></script>
 
-
+{{--TAB--}}
+<script src="{{ asset('app-assets') }}/js/scripts/navs/navs.min.js"></script>
 <!-- END PAGE LEVEL JS-->
 
 
