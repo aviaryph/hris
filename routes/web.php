@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('login');
 });
-Route::get('login', 'AuthenticationController@login');
-
+Route::post('login', 'AuthenticationController@login');
+Route::get('profile/{id}', 'EmployeeProfileController@index');
 Route::resource('dashboard', 'DashboardController');
 Route::resource('company', 'CompanyController');
 Route::resource('branch', 'BranchController');

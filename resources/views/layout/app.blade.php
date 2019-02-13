@@ -350,34 +350,34 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="la la-group"></i><span class="menu-title" data-i18n="nav.project.main">Employee</span></a>
-                <ul class="menu-content">
-                    <li><a class="menu-item" href="{{ url('employee') }}" data-i18n="nav.project.project_summary">Employee</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-setrole') }}" data-i18n="nav.project.project_summary">Set Roles</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-award') }}" data-i18n="nav.project.project_summary">Awards</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-transfer') }}" data-i18n="nav.project.project_summary">Transfers</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-resignation') }}" data-i18n="nav.project.project_summary">Resignation</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-travel') }}" data-i18n="nav.project.project_summary">Travels</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-promotion') }}" data-i18n="nav.project.project_summary">Promotions</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-complain') }}" data-i18n="nav.project.project_summary">Complaints</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-warning') }}" data-i18n="nav.project.project_summary">Warning</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-termination') }}" data-i18n="nav.project.project_summary">Terminations</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-lastLogin') }}" data-i18n="nav.project.project_summary">Employee Last Login</a>
-                    </li>
-                    <li><a class="menu-item" href="{{ url('employee-exit') }}" data-i18n="nav.project.project_summary">Employee Exit</a>
-                    </li>
-                </ul>
-            </li>
+            {{--<li class=" nav-item"><a href="#"><i class="la la-group"></i><span class="menu-title" data-i18n="nav.project.main">Employee</span></a>--}}
+                {{--<ul class="menu-content">--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee') }}" data-i18n="nav.project.project_summary">Employee</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-setrole') }}" data-i18n="nav.project.project_summary">Set Roles</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-award') }}" data-i18n="nav.project.project_summary">Awards</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-transfer') }}" data-i18n="nav.project.project_summary">Transfers</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-resignation') }}" data-i18n="nav.project.project_summary">Resignation</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-travel') }}" data-i18n="nav.project.project_summary">Travels</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-promotion') }}" data-i18n="nav.project.project_summary">Promotions</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-complain') }}" data-i18n="nav.project.project_summary">Complaints</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-warning') }}" data-i18n="nav.project.project_summary">Warning</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-termination') }}" data-i18n="nav.project.project_summary">Terminations</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-lastLogin') }}" data-i18n="nav.project.project_summary">Employee Last Login</a>--}}
+                    {{--</li>--}}
+                    {{--<li><a class="menu-item" href="{{ url('employee-exit') }}" data-i18n="nav.project.project_summary">Employee Exit</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
         </ul>
     </div>
 </div>
