@@ -35,3 +35,7 @@ Route::resource('employee-lastlogin', 'EmployeeLastLoginController');
 Route::resource('employee-exit', 'EmployeeExitController');
 Route::resource('employee-leave', 'EmployeeLeaveController');
 Route::resource('employee-profile', 'EmployeeProfileController');
+Route::resource('employee-document', 'EmployeeDocumentController');
+Route::resource('employee-contact', 'EmployeeContactController');
+Route::resource('employee-education', 'EmployeeEducationController');
+Route::resource('employee-work-experience', 'EmployeeWorkExperienceController');

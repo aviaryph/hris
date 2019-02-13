@@ -36,7 +36,7 @@ class EmployeeLeaveController extends Controller
         return redirect()->back()->with($notification);
     }
 
-    public function update(Request $request, EmployeeLeave $employeeAward)
+    public function update(Request $request, EmployeeLeave $employeeLeave)
     {
         EmployeeLeave::find($employeeLeave->id)->update($request->all());
         $notification = array(

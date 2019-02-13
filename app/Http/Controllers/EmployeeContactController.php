@@ -5,82 +5,53 @@ namespace App\Http\Controllers;
 use App\EmployeeContact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class EmployeeContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $data_contact = DB::table('employee_contacts')
+            ->select('employee_contacts.id as id','employee_no','employee_id','relation','is_primary','is_dependent','contact_name','work_phone','work_phone_extension','mobile_phone','home_phone','work_email','personal_email','address_1','address_2','city','state','zipcode','country')
+            ->join('employee', 'employee_contacts.employee_id', '=', 'employee.id')
+            ->whereNull('employee_contacts.deleted_at')
+            ->where('employee_id', '1')
+            ->get();
+
+       //dd($data_contact);
+
+        $employeeContact = EmployeeContact::all();
+        return view('Employee.contact-list', compact('employeeContact','data_contact'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        EmployeeContact::create($request->all());
+        $notification = array(
+            'message' => 'Employee Contact Created Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\EmployeeContact  $employeeContact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(EmployeeContact $employeeContact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\EmployeeContact  $employeeContact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(EmployeeContact $employeeContact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\EmployeeContact  $employeeContact
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, EmployeeContact $employeeContact)
     {
-        //
+        EmployeeContact::find($employeeContact->id)->update($request->all());
+        $notification = array(
+            'message' => 'Employee Contact Updated Successfully',
+            'alert-type' => 'info'
+        );
+        return redirect()->back()->with($notification);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\EmployeeContact  $employeeContact
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(EmployeeContact $employeeContact)
     {
-        //
+        EmployeeContact::find($employeeContact->id)->delete();
+        $notification = array(
+            'message' => 'Employee Contact Deleted Successfully',
+            'alert-type' => 'error'
+        );
+        return redirect()->back()->with($notification);
     }
+
 }
