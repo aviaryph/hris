@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\EmployeeBankAccount;
+use App\EmployeeEmployment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class EmployeeBankAccountController extends Controller
+class EmployeeEmploymentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +42,10 @@ class EmployeeBankAccountController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\EmployeeBankAccount  $employeeBankAccount
+     * @param  \App\EmployeeEmployment  $employeeEmployment
      * @return \Illuminate\Http\Response
      */
-    public function show(EmployeeBankAccount $employeeBankAccount)
+    public function show(EmployeeEmployment $employeeEmployment)
     {
         //
     }
@@ -53,10 +53,10 @@ class EmployeeBankAccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\EmployeeBankAccount  $employeeBankAccount
+     * @param  \App\EmployeeEmployment  $employeeEmployment
      * @return \Illuminate\Http\Response
      */
-    public function edit(EmployeeBankAccount $employeeBankAccount)
+    public function edit(EmployeeEmployment $employeeEmployment)
     {
         //
     }
@@ -65,10 +65,10 @@ class EmployeeBankAccountController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\EmployeeBankAccount  $employeeBankAccount
+     * @param  \App\EmployeeEmployment  $employeeEmployment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, EmployeeBankAccount $employeeBankAccount)
+    public function update(Request $request, EmployeeEmployment $employeeEmployment)
     {
         //
     }
@@ -76,10 +76,10 @@ class EmployeeBankAccountController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\EmployeeBankAccount  $employeeBankAccount
+     * @param  \App\EmployeeEmployment  $employeeEmployment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(EmployeeBankAccount $employeeBankAccount)
+    public function destroy(EmployeeEmployment $employeeEmployment)
     {
         //
     }

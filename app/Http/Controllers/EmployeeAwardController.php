@@ -12,11 +12,11 @@ class EmployeeAwardController extends Controller
 {
     public function index()
     {
-        $data = DB::table('employee_awards')
-         ->select('settings_constants.value as award_type','employee_awards.id as id','award_type_id','firstname','lastname','employee_awards.employee_id','employee.employee_no','gift_item','cash_price','award_photo','award_month_year','award_information','description','award_date')
-            ->join('employee', 'employee_awards.employee_id', '=', 'employee.id')
-            ->join('settings_constants', 'employee_awards.award_type_id', '=', 'settings_constants.id')
-            ->whereNull('employee_awards.deleted_at')
+        $data = DB::table('employee_awards as ea')
+         ->select('sc.value as award_type','ea.id as id','award_type_id','firstname','lastname','ea.employee_id','e.employee_no','gift_item','cash_price','award_photo','award_month_year','award_information','description','award_date')
+            ->join('employee as e', 'ea.employee_id', '=', 'e.id')
+            ->join('settings_constants as sc', 'ea.award_type_id', '=', 'sc.id')
+            ->whereNull('ea.deleted_at')
             ->get();
 //dd($data);
         $employee = Employee::all()->sortByDesc('lastname');
