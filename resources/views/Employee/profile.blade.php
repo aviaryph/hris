@@ -51,7 +51,7 @@
                                                     <a class="nav-link active" id="base-tabGeneralInfo"
                                                        data-toggle="tab" aria-controls="tabGeneralInfo"
                                                        href="#tabGeneralInfo" aria-expanded="true"><i
-                                                                class="la la-user"></i> General Info. {{ $employee_id }}
+                                                                class="la la-user"></i> General Info.
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
@@ -205,7 +205,7 @@
                                                                                          style="height: 1148.5px;">
 
 
-                                                                                        <form action="employee/{{ $employee_id }}"
+                                                                                        <form action="/employee/{{ $employee_id }}"
                                                                                               method="POST"
                                                                                               enctype="multipart/form-data">
                                                                                             @csrf
@@ -457,7 +457,7 @@
                                                                                                             </div>
                                                                                                             <div align="right">
                                                                                                                 <button type="submit"
-                                                                                                                        class="btn btn-primary">
+                                                                                                                        class="btn btn-primary btn-block">
                                                                                                                     <i class="la la-check-square-o"></i>
                                                                                                                     Update
                                                                                                                 </button>
@@ -480,7 +480,7 @@
                                                                                 <div class="card"
                                                                                      style="height: 1148.5px;">
 
-                                                                                    <form action="employee/{{ $employee_id }}"
+                                                                                    <form action="/employee/{{ $employee_id }}"
                                                                                           method="POST"
                                                                                           enctype="multipart/form-data">
                                                                                         @csrf
@@ -535,7 +535,7 @@
                                                                                                     </div>
                                                                                                     <div align="right">
                                                                                                         <button type="submit"
-                                                                                                                class="btn btn-primary">
+                                                                                                                class="btn btn-primary btn-block">
                                                                                                             <i class="la la-check-square-o"></i>
                                                                                                             Update
                                                                                                         </button>
@@ -603,7 +603,7 @@
                                                                                                     </div>
                                                                                                     <div class="card-content collapse show">
                                                                                                         <div class="card-body card-dashboard">
-                                                                                                            <table class="table table-striped table-bordered dataex-res-configuration">
+                                                                                                            <table class="table table-striped table-bordered dataex-res-configuration" width="100%">
                                                                                                                 <thead>
                                                                                                                 <tr>
                                                                                                                     <th>
@@ -796,7 +796,6 @@
 
                                             <div class="tab-pane" id="tabDocument" aria-labelledby="base-tabDocument">
                                                 <h1>Document</h1>
-
                                                 <div class="menu pmd-floating-action" role="navigation">
                                                     <a href="#" data-toggle="modal" data-target="#createDocument"
                                                        class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-success"
@@ -805,11 +804,11 @@
                                                         <i class="la la-plus-circle"></i>
                                                     </a>
                                                 </div>
-                                                <div class="col-lg-12">
+                                                <div class="col-md-12">
                                                     <div class="card">
                                                         <div class="card-content collapse show">
-                                                            <div class="card-body card-dashboard">
-                                                                <table class="table table-striped table-bordered dataex-res-configuration">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped table-bordered dataex-res-configuration" width="100%">
                                                                     <thead>
                                                                     <tr>
                                                                         <th>Document Type</th>
@@ -1112,7 +1111,7 @@
     <div class="modal fade" id="createEducation" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="employee-education" method="POST" enctype="multipart/form-data">
+                <form action="/employee-education" method="POST" enctype="multipart/form-data">
                     <input type="hidden" value="{{ $employee_id }}" name="employee_id">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">New Education Record</h4>
@@ -1169,7 +1168,7 @@
         <div class="modal fade" id="editEducation{{ $row->id }}" role="dialog">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
-                    <form action="employee-education/{{ $row->id }}" method="POST"
+                    <form action="/employee-education/{{ $row->id }}" method="POST"
                           enctype="multipart/form-data">
                         <div class="modal-header">
                             <h4 class="title" id="defaultModalLabel">Edit Record</h4>
@@ -1234,7 +1233,7 @@
         <div class="modal fade" id="deleteEducation{{ $row->id }}" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
-                    <form action="employee-education/{{ $row->id }}" method="POST"
+                    <form action="/employee-education/{{ $row->id }}" method="POST"
                           enctype="multipart/form-data">
                         <div class="modal-header">
                             <h4 class="title" id="defaultModalLabel">Delete Record</h4>
@@ -1259,7 +1258,7 @@
     <div class="modal fade" id="createWorkExperience" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="employee-work-experience" method="POST" enctype="multipart/form-data">
+                <form action="/employee-work-experience" method="POST" enctype="multipart/form-data">
                     <input type="hidden" value="{{ $employee_id }}" name="employee_id">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">New Award Record</h4>
@@ -1314,7 +1313,7 @@
     <div class="modal fade" id="editWorkExperience{{ $row->id }}" role="dialog">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="employee-work-experience/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/employee-work-experience/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Edit Record</h4>
                     </div>
@@ -1367,7 +1366,7 @@
     <div class="modal fade" id="deleteWorkExperience{{ $row->id }}" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
-                <form action="employee-work-experience/{{ $row->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/employee-work-experience/{{ $row->id }}" method="POST" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="title" id="defaultModalLabel">Delete Record</h4>
                     </div>
